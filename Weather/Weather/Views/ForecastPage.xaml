@@ -5,7 +5,6 @@
              xmlns:Views="Weather.Views.MainPageFlyout"
              xmlns:views="clr-namespace:Weather.Views">
 
-
     <Grid VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -90,9 +89,6 @@
                             BackgroundColor="Black"
                             Clicked="RefreshButton"
                                />
-                    <StackLayout Spacing="7" 
-                                 HorizontalOptions="CenterAndExpand">
-                    </StackLayout>
                     
                 </StackLayout>
                 <StackLayout Grid.Column="1" 
@@ -157,7 +153,6 @@
             </Grid>
             
         </Frame>
-        
   
         <ListView x:Name="groupedList" 
                   SeparatorVisibility="None"

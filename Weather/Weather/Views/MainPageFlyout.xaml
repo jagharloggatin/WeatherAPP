@@ -33,7 +33,7 @@
                     <Label
               Grid.Column="1"
               Grid.Row="2"
-              Text="Weather"
+              Text="Select a city"
                         TextColor="White"
                         FontAttributes="Bold"
               Style="{DynamicResource SubtitleStyle}"/>

@@ -16,7 +16,7 @@ namespace Weather.Services
     public class OpenWeatherService
     {
         HttpClient httpClient = new HttpClient();
-        readonly string apiKey = "03ca866006a2319edcd9062173e64a7c"; // Your API Key
+        readonly string apiKey = "6d51fc165782669f8ef441948b05374e"; // Your API Key
 
         // part of your event and cache code here
         public event EventHandler<string> WeatherForecastAvailable;

@@ -37,11 +37,12 @@ namespace Weather.Views
             //You want to set the Title or set the City
             //This is making the first load of data
 
+
             MainThread.BeginInvokeOnMainThread(async () => {await LoadForecast();});
         }
         private async Task LoadForecast()
         {
-            //Heare you load the forecast
+            //Here you load the forecast
 
             await Task.Run(() =>
             {
@@ -51,6 +52,9 @@ namespace Weather.Views
                     t1.Result.Items.ForEach(x => x.Icon = $"http://openweathermap.org/img/wn/{x.Icon}@2x.png");
 
                     groupedList.ItemsSource = t1.Result.Items;
+
+                    //groupedforecast.Items = t1.Result.Items.OrderByDescending(x => x.DateTime.DayOfWeek).GroupBy(x => x.DateTime, x => x);
+
                     ImageIcon.Source = t1.Result.Items[0].Icon;
                     currentTemp.Text = $"{t1.Result.Items[0].Temperature:F0}°C";
                     currentWind.Text = $"{t1.Result.Items[0].WindSpeed:F0} m/s";

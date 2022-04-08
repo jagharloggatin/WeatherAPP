@@ -23,6 +23,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="150"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="100"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
@@ -32,51 +33,197 @@
                      VerticalOptions="Center"
                      Margin="20,5">
 
- 
 
-                    <StackLayout Orientation="Horizontal" 
-                                 HorizontalOptions="Center">
-                        
-                        <Label Text="The" 
+                </StackLayout>
+                <StackLayout 
+                    Orientation="Horizontal"
+                        HorizontalOptions="Center"
+                        Grid.Row="2"
+                    Spacing="10">
+
+                    <Label Text="W" 
+                           TextColor="White" 
+                           FontAttributes="Bold"
+                           FontFamily="Cascadia Mono"
+                           x:Name="letter1"
+                           FontSize="40"
+                           IsVisible="False"
+                       />
+                    
+                    <Label Text="e" 
                        TextColor="White" 
                        FontAttributes="Bold"
                        FontFamily="Cascadia Mono"
-                       x:Name="second"
+                       x:Name="letter2"
+                       FontSize="40"
                        IsVisible="False"
-                       FontSize="20"
                        />
-
-                        <Label Text="One AND only" 
+                    
+                    <Label Text="a" 
                        TextColor="White" 
                        FontAttributes="Bold"
                        FontFamily="Cascadia Mono"
-                       x:Name="third"
-                       IsVisible="False"
-                       FontSize="20"
+                       x:Name="letter3"
+                       FontSize="40"
+                           IsVisible="False"
                        />
-
-                        <Label Text="WeatherApplication™" 
+                    
+                    <Label Text="t" 
                        TextColor="White" 
                        FontAttributes="Bold"
                        FontFamily="Cascadia Mono"
-                       x:Name="fourth"
-                       IsVisible="False"
-                       FontSize="20"
+                       x:Name="letter4"
+                       FontSize="40"
+                           IsVisible="False"
                        />
-                    </StackLayout>
-
-                    <StackLayout HorizontalOptions="Center">
-
-                        <Label Text="Created by Jonathan Bravo" 
+                    
+                    <Label Text="h" 
                        TextColor="White" 
                        FontAttributes="Bold"
                        FontFamily="Cascadia Mono"
-                       x:Name="first"
-                       IsVisible="False"
-                       FontSize="20"
+                       x:Name="letter5"
+                       FontSize="40"
+                           IsVisible="False"
                        />
 
-                    </StackLayout>
+                    <Label Text="e" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter6"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+                    
+                    <Label Text="r" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter7"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+
+                    <Label Text="A" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter8"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+                    <Label Text="p" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter9"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+
+                    <Label Text="p" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter10"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+                    <Label Text="l" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter11"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+                    <Label Text="i" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter12"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+
+                    <Label Text="c" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter13"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+
+                    <Label Text="a" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter14"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+
+                    <Label Text="t" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter15"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+
+                    <Label Text="i" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter16"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+
+                    <Label Text="o" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter17"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+                    <Label Text="n" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter18"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+
+                    <Label Text="™" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="letter19"
+                       FontSize="40"
+                           IsVisible="False"
+                       />
+
+                </StackLayout>
+
+                <StackLayout 
+                        HorizontalOptions="CenterAndExpand"
+                    Grid.Row="3"
+                        >
+
+                    <Label Text="Created by Jonathan Bravo" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                           CharacterSpacing="5"
+                       x:Name="printName"
+                       IsVisible="False"
+                       FontSize="25"
+                       />
 
                 </StackLayout>
             </Grid>
