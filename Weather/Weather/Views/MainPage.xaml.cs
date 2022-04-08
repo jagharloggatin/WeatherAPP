@@ -16,9 +16,11 @@ namespace Weather.Views
         {
             InitializeComponent();
             FlyoutPage.ListView.ItemSelected += ListView_ItemSelected;
+            FlyoutPage.BackgroundImageSource = $"https://i.pinimg.com/originals/f6/15/74/f615740d8ec75ad36e322ecd9da8b129.gif";
             if (Device.RuntimePlatform == Device.UWP)
             {
                 FlyoutLayoutBehavior = FlyoutLayoutBehavior.Popover;
+
             }
         }
 

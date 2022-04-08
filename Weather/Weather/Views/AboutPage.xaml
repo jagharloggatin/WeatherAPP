@@ -2,25 +2,84 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Weather.Views.AboutPage"
-             Title="About Weather">
+             Title="Created by">
+
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Project Part B" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Weather in Xamarin.Forms" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="This part of the project is about making a simple UI in to the console weather service made in project part A using Flyout." 
-               FontSize="16" Padding="30,0,30,0"/>
-        <Label Text="Select a city and give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Created by Martin Lenart"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
 
+
+        <Grid VerticalOptions="FillAndExpand">
+
+            <Image 
+               Aspect="AspectFill" 
+               VerticalOptions="FillAndExpand"
+               BackgroundColor="Transparent"
+               Opacity="1"
+               x:Name="aboutBack"
+            
+            />
+            <Grid VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Vertical" Grid.Row="1"
+                    Spacing="20"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Margin="20,5">
+
+ 
+
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="Center">
+                        
+                        <Label Text="The" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="second"
+                       IsVisible="False"
+                       FontSize="20"
+                       />
+
+                        <Label Text="One AND only" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="third"
+                       IsVisible="False"
+                       FontSize="20"
+                       />
+
+                        <Label Text="WeatherApplication™" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="fourth"
+                       IsVisible="False"
+                       FontSize="20"
+                       />
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="Center">
+
+                        <Label Text="Created by Jonathan Bravo" 
+                       TextColor="White" 
+                       FontAttributes="Bold"
+                       FontFamily="Cascadia Mono"
+                       x:Name="first"
+                       IsVisible="False"
+                       FontSize="20"
+                       />
+
+                    </StackLayout>
+
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </StackLayout>
 </ContentPage>

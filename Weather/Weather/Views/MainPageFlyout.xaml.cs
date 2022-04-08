@@ -16,7 +16,6 @@ namespace Weather.Views
     public partial class MainPageFlyout : ContentPage
     {
         public ListView ListView;
-
         public MainPageFlyout()
         {
             InitializeComponent();
@@ -33,8 +32,15 @@ namespace Weather.Views
             {
                 MenuItems = new ObservableCollection<MainPageFlyoutMenuItem>(new[]
                 {
-                    new MainPageFlyoutMenuItem { Id = 0, Title = "About Weather", TargetType=typeof(AboutPage) },
-                    new MainPageFlyoutMenuItem { Id = 1, Title = "Debug Console", TargetType=typeof(ConsolePage) },
+                    new MainPageFlyoutMenuItem { Id = 0, Title = "Author Page", TargetType=typeof(AboutPage)  },
+                    //new MainPageFlyoutMenuItem { Id = 1, Title = "Debug Console", TargetType=typeof(ConsolePage) },
+                    new MainPageFlyoutMenuItem { Id = 1, Title = "Stockholm", TargetType=typeof(ForecastPage) },
+                    new MainPageFlyoutMenuItem { Id = 2, Title = "Lund", TargetType=typeof(ForecastPage) },
+                    new MainPageFlyoutMenuItem { Id = 3, Title = "New York", TargetType=typeof(ForecastPage) },
+                    new MainPageFlyoutMenuItem { Id = 4, Title = "Düsseldorf", TargetType=typeof(ForecastPage) },
+                    new MainPageFlyoutMenuItem { Id = 5, Title = "Frankfurt", TargetType=typeof(ForecastPage) },
+                    new MainPageFlyoutMenuItem { Id = 6, Title = "Singapore", TargetType=typeof(ForecastPage) },
+                    new MainPageFlyoutMenuItem { Id = 7, Title = "Tokyo", TargetType=typeof(ForecastPage) },
                 });
             }
         }

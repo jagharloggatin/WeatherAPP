@@ -84,13 +84,23 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <Content Include="rain.jpg" />
+    <AndroidResource Include="Resources\drawable\wind.jpg" />
+    <AndroidResource Include="Resources\drawable\refreshbutton.png" />
+    <AndroidResource Include="Resources\drawable\Stockholm.png" />
+    <AndroidResource Include="Resources\drawable\Uppsala.png" />
+    <AndroidResource Include="Resources\drawable\New York.png" />
+    <Content Include="wind.jpg" />
+    <Content Include="wind.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Weather\Weather.csproj">
       <Project>{0FE0A056-BFE6-44AA-B937-7190443D1C79}</Project>
       <Name>Weather</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Purple.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
