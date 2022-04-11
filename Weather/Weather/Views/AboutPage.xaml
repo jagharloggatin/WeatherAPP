@@ -4,19 +4,15 @@
              x:Class="Weather.Views.AboutPage"
              Title="Created by">
 
-
     <StackLayout>
 
-
         <Grid VerticalOptions="FillAndExpand">
-
             <Image 
                Aspect="AspectFill" 
                VerticalOptions="FillAndExpand"
                BackgroundColor="Transparent"
                Opacity="1"
                x:Name="aboutBack"
-            
             />
             <Grid VerticalOptions="FillAndExpand">
 
@@ -224,7 +220,6 @@
                        IsVisible="False"
                        FontSize="25"
                        />
-
                 </StackLayout>
             </Grid>
         </Grid>

@@ -26,7 +26,6 @@ namespace Weather.Views
 
         public async void IntroScreen() 
         {
-
             letter1.IsVisible = true;
             letter1.Opacity = 0;
             letter2.IsVisible = true;

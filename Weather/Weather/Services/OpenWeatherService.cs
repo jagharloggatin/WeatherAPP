@@ -43,26 +43,7 @@ namespace Weather.Services
 
             return forecast;
         }
-        public async Task<Forecast> GetForecastAsync(double latitude, double longitude)
-        {
-            //https://openweathermap.org/current
-            var language = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-            var uri = $"https://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&units=metric&lang={language}&appid={apiKey}";
 
-            double keyLat = latitude;
-            double keyLong = longitude;
-            string keyDate = DateTime.Now.ToString("yyyy-MM-dd:HH:mm");
-            var key = (keyLat, keyLong, keyDate);
-
-            if (!_cacheDictionaryGeo.TryGetValue(key, out var forecast))
-            {
-                forecast = new Forecast();
-                forecast = await ReadWebApiAsync(uri);
-                _cacheDictionaryGeo[key] = forecast;
-            }
-
-            return forecast;
-        }
         private async Task<Forecast> ReadWebApiAsync(string uri)
         {
             // part of your read web api code here
@@ -85,6 +66,7 @@ namespace Weather.Services
                 Description = x.weather[0].description
             }).ToList();
 
+            forecast.Items.ForEach(x => x.Icon = $"http://openweathermap.org/img/wn/{x.Icon}@2x.png");
 
             return forecast;
         }
@@ -93,6 +75,7 @@ namespace Weather.Services
             DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
             dateTime = dateTime.AddSeconds(unixTimeStamp).ToLocalTime();
             return dateTime;
+
         }
     }
 }

@@ -49,11 +49,9 @@ namespace Weather.Views
                 Task<Forecast> t1 = service.GetForecastAsync(Title);
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    t1.Result.Items.ForEach(x => x.Icon = $"http://openweathermap.org/img/wn/{x.Icon}@2x.png");
-
-                    groupedList.ItemsSource = t1.Result.Items;
-
-                    //groupedforecast.Items = t1.Result.Items.OrderByDescending(x => x.DateTime.DayOfWeek).GroupBy(x => x.DateTime, x => x);
+                    //groupedList.ItemsSource = t1.Result.Items;
+                    groupedforecast.Items = t1.Result.Items.GroupBy(x => x.DateTime.Date);
+                    groupedList.ItemsSource = groupedforecast.Items;
 
                     ImageIcon.Source = t1.Result.Items[0].Icon;
                     currentTemp.Text = $"{t1.Result.Items[0].Temperature:F0}°C";
