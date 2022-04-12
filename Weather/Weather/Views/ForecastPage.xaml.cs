@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
-
+using Weather.Models;
+using Weather.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using Weather.Models;
-using Weather.Services;
 
 namespace Weather.Views
 {
@@ -24,7 +19,7 @@ namespace Weather.Views
         public ForecastPage()
         {
             InitializeComponent();
-            
+
             service = new OpenWeatherService();
             groupedforecast = new GroupedForecast();
         }
@@ -37,17 +32,18 @@ namespace Weather.Views
             //You want to set the Title or set the City
             //This is making the first load of data
 
+            //await DisplayAlert?
 
-            MainThread.BeginInvokeOnMainThread(async () => {await LoadForecast();});
+            MainThread.BeginInvokeOnMainThread(async () => { await LoadForecast(); });
         }
         private async Task LoadForecast()
         {
             //Here you load the forecast
 
-            await Task.Run(() =>
+            await Task.Run( () =>
             {
                 Task<Forecast> t1 = service.GetForecastAsync(Title);
-                Device.BeginInvokeOnMainThread(() =>
+                Device.BeginInvokeOnMainThread( () =>
                 {
                     //groupedList.ItemsSource = t1.Result.Items;
                     groupedforecast.Items = t1.Result.Items.GroupBy(x => x.DateTime.Date);
@@ -58,8 +54,8 @@ namespace Weather.Views
                     currentWind.Text = $"{t1.Result.Items[0].WindSpeed:F0} m/s";
                     currentDesc.Text = $"{t1.Result.Items[0].Description}";
                     currentTitle.Text = $"Current weather data for {Title}";
-                    backgroundPic.Source = $"https://i.pinimg.com/originals/20/ae/f2/20aef23d39a8dcb74bf663ed89ab08d6.gif";
                     currentDateTime.Text = $"{t1.Result.Items[0].DateTime.ToString("yyyy - MMMM - d")} \n{DateTime.Now.ToString("HH:mm")}";
+                    backgroundPic.Source = $"{Title}.png";
                 });
             });
         }

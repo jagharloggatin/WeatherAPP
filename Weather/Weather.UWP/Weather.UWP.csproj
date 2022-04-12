@@ -136,10 +136,26 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\wind.png" />
+    <Content Include="Dubai.png" />
+    <Content Include="Düsseldorf.png" />
+    <Content Include="Frankfurt.png" />
+    <Content Include="Kiruna.png" />
+    <Content Include="Lund.png" />
+    <Content Include="New York.png" />
+    <Content Include="Peking.png" />
     <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Purple.jpg" />
     <Content Include="rain.jpg" />
     <Content Include="refreshbutton.png" />
+    <Content Include="Rome.png" />
+    <Content Include="Santiago.png" />
+    <Content Include="Shanghai.png" />
+    <Content Include="Singapore.png" />
     <Content Include="Stockholm.png" />
+    <Content Include="Taipei.jpg" />
+    <Content Include="Taipei.png" />
+    <Content Include="Tokyo.png" />
+    <Content Include="Uppsala.png" />
     <Content Include="wind.jpg" />
     <Content Include="wind.png" />
   </ItemGroup>

@@ -3,8 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Weather.Views.ForecastPage"
              xmlns:Views="Weather.Views.MainPageFlyout"
-             xmlns:views="clr-namespace:Weather.Views">
+             xmlns:views="clr-namespace:Weather.Views"
+                >
 
+
+
+    
+    
     <Grid VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -47,24 +52,33 @@
                        HorizontalOptions="Center"
                        x:Name="currentDateTime"
                        />
-            </StackLayout>
 
+                <ActivityIndicator IsRunning="False"
+                                   Color="White"
+                                   x:Name="refreshLoad"
+                                   >
+
+                </ActivityIndicator>
+
+
+            </StackLayout>
+   
         </StackLayout>
-        <Frame BackgroundColor="Transparent" 
-               VerticalOptions="EndAndExpand">
-            
-            <ActivityIndicator IsRunning="False" 
-                               Color="White" 
-                               x:Name="refreshLoad"
-                               />
-        </Frame>
+
+
+   
         <Frame Grid.Row="2" 
                HasShadow="True" 
-               CornerRadius="10" 
-               Margin="20,-40,20,0" 
+               CornerRadius="20" 
+               Margin="30,-40,30,0" 
                Padding="0" 
                HeightRequest="120" 
-               VerticalOptions="Start">
+               VerticalOptions="Start"
+               BackgroundColor="White"
+               BorderColor="Black"
+               >
+            
+            <!-- x:OnPlatform Android -->
             
             <Grid HorizontalOptions="FillAndExpand" 
                   VerticalOptions="CenterAndExpand">
@@ -74,7 +88,15 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+
                 <StackLayout Orientation="Vertical" 
                              Spacing="10" 
                              HorizontalOptions="CenterAndExpand" 
@@ -157,7 +179,7 @@
         <ListView x:Name="groupedList" 
                   SeparatorVisibility="None"
                   Grid.Row="3" 
-                  Margin="20,0" 
+                  Margin="{x:OnPlatform Android='50', iOS='50', UWP='20'}" 
                   VerticalOptions="FillAndExpand" 
                   HorizontalOptions="FillAndExpand"
                   IsGroupingEnabled="true"
@@ -168,8 +190,8 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal"
-                                     >
-                            <Label FontSize="25" 
+                                   >
+                            <Label FontSize="20" 
                                    TextColor="Black" 
                                    FontAttributes="Bold"
                                    VerticalOptions="Center"

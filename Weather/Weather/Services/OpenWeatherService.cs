@@ -33,8 +33,10 @@ namespace Weather.Services
             string keyDate = DateTime.Now.ToString("yyyy-MM-dd:HH:mm");
             string keyCity = City;
             var key = (keyCity, keyDate);
+            Forecast forecast = null;
 
-            if (!_cacheDictionaryCity.TryGetValue(key, out var forecast))
+
+            if (!_cacheDictionaryCity.TryGetValue(key, out forecast))
             {
                 forecast = new Forecast();
                 forecast = await ReadWebApiAsync(uri);

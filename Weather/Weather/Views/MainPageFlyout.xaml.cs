@@ -48,6 +48,7 @@ namespace Weather.Views
                     new MainPageFlyoutMenuItem { Id = 12, Title = "Santiago", TargetType=typeof(ForecastPage) },
                     new MainPageFlyoutMenuItem { Id = 13, Title = "Dubai", TargetType=typeof(ForecastPage) },
                     new MainPageFlyoutMenuItem { Id = 14, Title = "Rome", TargetType=typeof(ForecastPage) },
+                    new MainPageFlyoutMenuItem { Id = 15, Title = "Uppsala", TargetType=typeof(ForecastPage) },
                 });
             }
         }
