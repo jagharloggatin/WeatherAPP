@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using Weather.Consoles;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using Weather.Services;
-using Weather.Models;
-using Weather.Consoles;
 
 namespace Weather.Views
 {

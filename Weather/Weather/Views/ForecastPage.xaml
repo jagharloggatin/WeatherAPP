@@ -5,9 +5,6 @@
              xmlns:Views="Weather.Views.MainPageFlyout"
              xmlns:views="clr-namespace:Weather.Views"
                 >
-
-
-
     
     
     <Grid VerticalOptions="FillAndExpand">
@@ -94,8 +91,6 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
-
 
                 <StackLayout Orientation="Vertical" 
                              Spacing="10" 
@@ -185,7 +180,7 @@
                   IsGroupingEnabled="true"
                   HasUnevenRows="true"
                   >
-            
+ 
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <ViewCell>

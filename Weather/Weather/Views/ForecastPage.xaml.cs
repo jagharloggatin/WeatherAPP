@@ -40,24 +40,24 @@ namespace Weather.Views
         {
             //Here you load the forecast
 
-            await Task.Run( () =>
-            {
-                Task<Forecast> t1 = service.GetForecastAsync(Title);
-                Device.BeginInvokeOnMainThread( () =>
-                {
-                    //groupedList.ItemsSource = t1.Result.Items;
-                    groupedforecast.Items = t1.Result.Items.GroupBy(x => x.DateTime.Date);
-                    groupedList.ItemsSource = groupedforecast.Items;
+            await Task.Run(() =>
+           {
+               Task<Forecast> t1 = service.GetForecastAsync(Title);
+               Device.BeginInvokeOnMainThread(() =>
+               {
+                   //groupedList.ItemsSource = t1.Result.Items;
+                   groupedforecast.Items = t1.Result.Items.GroupBy(x => x.DateTime.Date);
+                   groupedList.ItemsSource = groupedforecast.Items;
 
-                    ImageIcon.Source = t1.Result.Items[0].Icon;
-                    currentTemp.Text = $"{t1.Result.Items[0].Temperature:F0}°C";
-                    currentWind.Text = $"{t1.Result.Items[0].WindSpeed:F0} m/s";
-                    currentDesc.Text = $"{t1.Result.Items[0].Description}";
-                    currentTitle.Text = $"Current weather data for {Title}";
-                    currentDateTime.Text = $"{t1.Result.Items[0].DateTime.ToString("yyyy - MMMM - d")} \n{DateTime.Now.ToString("HH:mm")}";
-                    backgroundPic.Source = $"{Title}.png";
-                });
-            });
+                   ImageIcon.Source = t1.Result.Items[0].Icon;
+                   currentTemp.Text = $"{t1.Result.Items[0].Temperature:F0}°C";
+                   currentWind.Text = $"{t1.Result.Items[0].WindSpeed:F0} m/s";
+                   currentDesc.Text = $"{t1.Result.Items[0].Description}";
+                   currentTitle.Text = $"Current weather data for {Title}";
+                   currentDateTime.Text = $"{t1.Result.Items[0].DateTime.ToString("yyyy - MMMM - d")} \n{DateTime.Now.ToString("HH:mm")}";
+                   backgroundPic.Source = $"{Title}.png";
+               });
+           });
         }
 
         private async void RefreshButton(object sender, EventArgs e)

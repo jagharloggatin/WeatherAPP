@@ -1,9 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-using System.Threading.Tasks;
-using Weather.Models;
+﻿using Xamarin.Forms;
 
 namespace Weather
 {

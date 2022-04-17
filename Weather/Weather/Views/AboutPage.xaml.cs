@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Weather.Views
@@ -24,7 +18,7 @@ namespace Weather.Views
             IntroScreen();
         }
 
-        public async void IntroScreen() 
+        public async void IntroScreen()
         {
             letter1.IsVisible = true;
             letter1.Opacity = 0;

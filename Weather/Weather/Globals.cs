@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Weather
 {
@@ -15,8 +13,8 @@ namespace Weather
 
         #region Data implementation 
         // accessible as Globals.Data.xx such as Globasl.Data.Item1, Globals.Data.Item2 in this example
-        public string Item1 { get; set;}
-        public double Item2 { get; set;}
+        public string Item1 { get; set; }
+        public double Item2 { get; set; }
         #endregion
     }
 }
